@@ -11,7 +11,15 @@
 <style>
 
   @import url("https://hello.myfonts.net/count/33e407");
-  @font-face {font-family: 'Larsseit-Medium';src: url('fonts/33E407_0_0.eot');src: url('fonts/33E407_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/33E407_0_0.woff2') format('woff2'),url('fonts/33E407_0_0.woff') format('woff'),url('fonts/33E407_0_0.ttf') format('truetype');}
+  @font-face {
+    font-family: 'Larsseit-Medium';
+    src: url('fonts/33E407_0_0.eot');
+    src: url('fonts/33E407_0_0.eot?#iefix') format('embedded-opentype'),
+      url('fonts/33E407_0_0.woff2') format('woff2'),
+      url('fonts/33E407_0_0.woff') format('woff'),
+      url('fonts/33E407_0_0.ttf') format('truetype')
+    ;
+}
 
   @keyframes scale {
     to { transform: scale(2.5); }
@@ -59,7 +67,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-color: #DCE5DD;*/
     background-color: black;
     display: flex;
     align-items: center;
@@ -76,7 +83,6 @@
   }
 
   .words span {
-    /*color: black;*/
     color: white;
     position: absolute;
     top: 0;
@@ -95,15 +101,17 @@
     min-height: 100vh;
     transition: border-width .3s ease, background-color 0.2s ease;
   }
+
   @media (max-width: 700px) {
     header {
       min-height: calc(100vh - 70px);
     }
   }
 
-  .focus {
-    /*background-color: #E6F0E7;*/
-    border-width: 20px;
+  @media (min-width: 700px) {
+    .focus {
+      border-width: 20px;
+    }
   }
 
   .logo {
@@ -180,8 +188,6 @@
     padding: 15px;
   }
 
-
-
   main a {
     color: inherit;
     transition: all .2s ease;
@@ -216,8 +222,6 @@
     opacity: 0;
   }
 </style>
-
-
 
 <div class="container">
   <div class="intro">
@@ -316,9 +320,11 @@
   const logo = document.querySelector('.logo');
   const header = document.querySelector('header');
 
+
   logo.onmouseover = function(){
     header.classList.add('focus');
   }
+
   logo.onmouseout = function(){
     header.classList.remove('focus');
   }
