@@ -85,8 +85,13 @@
     background-color: #DCE5DD;
     border: 15px solid white;
     min-height: 800px;
-    min-height: 100%;
+    min-height: 100vh;
     transition: border-width .3s ease, background-color 0.2s ease;
+  }
+  @media (max-width: 700px) {
+    header {
+      border-bottom: 75px solid white; 
+    }
   }
 
   .focus {
