@@ -1,0 +1,318 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="js/smooth-scroll.js"></script>
+
+<title>Roo</title>
+
+<style>
+
+  @keyframes scale {
+    to { transform: scale(2.5); }
+  }
+
+  @keyframes appear {
+    0% { opacity: 1 }
+    70% { opacity: 1 }
+    100% { opacity: 0 }
+  }
+
+  @keyframes logoAppear {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes taglineAppear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: 'larsseit',sans-serif;
+    color: #000;
+  }
+
+  .intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #DCE5DD;*/
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1.5s ease-in;
+  }
+
+  .words {
+    position: relative;
+    animation: scale 7s ease-in forwards;
+  }
+
+  .words span {
+    /*color: black;*/
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    white-space: nowrap;
+    font-size: 20px;
+    opacity: 0;
+  }
+
+  header {
+    box-sizing: border-box;
+    background-color: #DCE5DD;
+    border: 15px solid white;
+    min-height: 800px;
+    min-height: 100vh;
+    transition: border-width .3s ease, background-color 0.2s ease;
+  }
+
+  .focus {
+    /*background-color: #E6F0E7;*/
+    border-width: 20px;
+  }
+
+  .logo {
+    display: block;
+    margin: 300px auto 50px;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  @supports(display: flex) {
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      margin: auto;
+    }
+    .logo-link {
+      margin: auto;
+    }
+
+    .tagline {
+      margin-bottom: 50px;
+    }
+  }
+
+  main {
+    padding: 0 170px;
+    background-image: url('leaf-left.png'), url('leaf-right.png');
+    background-repeat: no-repeat;
+    background-position: -40px 5%, right -40px bottom 5%;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+    line-height: 1.54;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      background-position: -70px 5%, right -70px bottom 5%;
+      padding: 100px 15px;
+      font-size: 22px;
+    }
+  }
+
+  small {
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  @media (min-width: 1300px ) {
+    main {
+      font-size: 32px;
+    }
+    small {
+      font-size: 18px;
+    }
+    main .inner {
+      min-width: 500px;
+    }
+  }
+
+  main .inner {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+
+
+  main a {
+    color: inherit;
+    transition: all .2s ease;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+  }
+
+  main a:hover {
+    border-color: #DCE5DD;
+  }
+
+  .show-intro .intro {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .show-intro .logo {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .intro-completed .tagline {
+    opacity: 0;
+  }
+
+  .intro-completed .intro {
+    opacity: 0;
+  }
+
+  .intro-completed .logo {
+    opacity: 0;
+  }
+</style>
+
+
+
+<div class="container">
+  <div class="intro">
+    <div class="words">
+      <span></span>
+      <span>Uro</span>
+      <span>Krav</span>
+      <span>Stress</span>
+      <span>Tidsklemme</span>
+      <span>Forventninger</span>
+      <span>Trene</span>
+      <span>Hente</span>
+      <span>Bringe</span>
+      <span>Rekke</span>
+      <span>Hjertebank</span>
+      <span>E-post</span>
+      <span>Messenger</span>
+      <span>Facebook</span>
+      <span>Kommenter</span>
+      <span>Lik</span>
+      <span>Del</span>
+      <span>Husk</span>
+      <span>Uro</span>
+      <span>Krav</span>
+      <span>Stress</span>
+      <span>Tidsklemme</span>
+      <span>Forventninger</span>
+      <span>Trene</span>
+      <span>Hente</span>
+      <span>Bringe</span>
+      <span>Rekke</span>
+      <span>Hjertebank</span>
+      <span>E-post</span>
+      <span>Messenger</span>
+      <span>Facebook</span>
+      <span>Kommenter</span>
+      <span>Lik</span>
+      <span>Del</span>
+      <span>Husk</span>
+     </div>
+   </div>
+
+  <header>
+    <a href="#main" data-scroll class="logo-link">
+      <img src="roo-logo.svg" width="78" height="104" alt="Roo logo" class="logo" />
+    </a>
+    <div class="tagline">Et stille sted</div>
+  </header>
+
+  <main id="main">
+    <div class="inner">
+      <p>Roo skal hjelpe mennesker til å finne ro, mental restitusjon og økt tilstedeværelse i en hverdag preget av belastende stress og indre uro. </p>
+      <p><small>Roo er under utvikling. Mer informasjon kommer høsten 2017.</small></p>
+      <p><a href="mailto:info@roo.no">info@roo.no</a></p>
+    </div>
+  </main>
+</div>
+
+<script>
+  const container = document.querySelector('.container')
+  const intro = document.querySelector('.intro')
+  const wordNodes = intro.querySelectorAll('.words span')
+
+  function startIntro() {
+    const scaleLength = Array.prototype.reduce.call(wordNodes, (totalDuration, node, index) => {
+      const ease = Math.pow(1 - (index / wordNodes.length), 5)
+      let duration = ease * 1
+      duration = Math.max(duration, 0.08)
+      const delay = totalDuration
+      node.style.animation = `appear ${duration}s ${delay}s`
+      return totalDuration + duration
+    }, 0)
+
+    document.querySelector('.words').style.animationDuration = `${scaleLength}s`
+
+    container.classList.add('show-intro')
+
+    setTimeout(() => {
+      container.classList.add('intro-completed')
+      container.classList.remove('show-intro')
+
+      setTimeout(() => {
+        document.querySelector('.logo').style.animation = `logoAppear 1.5s ease-out forwards`
+
+        setTimeout(() => {
+          document.querySelector('.tagline').style.animation = `taglineAppear 2s ease-out forwards`
+        }, 300)
+
+      }, 2000)
+
+    }, scaleLength * 1000 + 1000)
+
+  }
+
+
+  const logo = document.querySelector('.logo');
+  const header = document.querySelector('header');
+
+  logo.onmouseover = function(){
+    header.classList.add('focus');
+  }
+  logo.onmouseout = function(){
+    header.classList.remove('focus');
+  }
+
+  if (true) {
+    startIntro()
+  }
+
+  smoothScroll.init()
+</script>
