@@ -10,6 +10,9 @@
 
 <style>
 
+  @import url("https://hello.myfonts.net/count/33e407");
+  @font-face {font-family: 'Larsseit-Medium';src: url('fonts/33E407_0_0.eot');src: url('fonts/33E407_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/33E407_0_0.woff2') format('woff2'),url('fonts/33E407_0_0.woff') format('woff'),url('fonts/33E407_0_0.ttf') format('truetype');}
+
   @keyframes scale {
     to { transform: scale(2.5); }
   }
@@ -42,8 +45,12 @@
 
   body {
     margin: 0;
-    font-family: 'larsseit',sans-serif;
     color: #000;
+    font-family: 'Larsseit-Medium', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
   }
 
   .intro {
@@ -90,7 +97,7 @@
   }
   @media (max-width: 700px) {
     header {
-      height: calc(100vh - 85px);
+      min-height: calc(100vh - 85px);
     }
   }
 
